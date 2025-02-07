@@ -8,11 +8,13 @@
 variable "project_id" {
    description = "The ID of the project where Vertex AI tools will be used."
    type        = string
+   default     = "pj-na2-vertexai-01-dev-hpw"
  }
 
  variable "users" {
    description = "List of users to be added to the Vertex AI group."
    type        = list(string)
+   default     =["chris.yiu@cibcgcp-dev.com","nick.ricciardelli@cibcgcp-dev.com"]
  }
 
 # Example usage:
