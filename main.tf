@@ -1,6 +1,6 @@
 resource "google_cloud_identity_group" "vertex_ai_group" {
   provider   = google-beta
-  parent = "organizations/478879882790"
+  parent = "customers/C02a1kigs"
   group_key {
     id = "vertex-ai-users@cibcgcp-dev.com" # Adjust domain accordingly
   }
