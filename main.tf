@@ -2,7 +2,7 @@ resource "google_cloud_identity_group" "vertex_ai_group" {
   provider   = google-beta
   parent     = "customers/my-customer"
   group_key {
-    id = "vertex-ai-users@mydomain.com" # Adjust domain accordingly
+    id = "vertex-ai-users@cibcgcp-dev.com" # Adjust domain accordingly
   }
   labels = {
     "cloudidentity.googleapis.com/groups.discussion_forum" = ""
@@ -35,11 +35,11 @@ resource "google_project_iam_member" "vertex_ai_roles" {
 
   project = var.project_id
   role    = each.value
-  member  = "group:vertex-ai-users@mydomain.com"
+  member  = "group:vertex-ai-users@cibcgcp-dev.com"
 } 
 
 output "group_email" {
-  value = "vertex-ai-users@mydomain.com"
+  value = "vertex-ai-users@cibcgcp-dev.com"
   description = "Email of the Vertex AI user group."
 }
 
